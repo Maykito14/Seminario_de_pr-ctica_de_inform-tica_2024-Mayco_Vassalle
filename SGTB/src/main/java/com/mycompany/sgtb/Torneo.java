@@ -8,7 +8,7 @@ public class Torneo {
     private int torneoID;
     private String nombre;
     private Date fecha;
-    private String estado; // "activo" o "inactivo"
+    private String estado; // Puede ser "activo" o "inactivo"
     private ArrayList<Partido> partidos;
 
     private static ArrayList<Torneo> torneos = new ArrayList<>();
@@ -49,7 +49,7 @@ public class Torneo {
     public static void crearTorneo(Scanner scanner) {
         System.out.print("Ingrese el nombre del torneo: ");
         String nombre = scanner.nextLine();
-        Date fecha = new Date(); // Para simplificar, usamos la fecha actual
+        Date fecha = new Date(); // Nuevamente, se decide utilizar la fecha actual del sistema
 
         Torneo nuevoTorneo = new Torneo(nombre, fecha);
         torneos.add(nuevoTorneo);
@@ -61,14 +61,14 @@ public class Torneo {
     private static void generarLlave(Torneo torneo) {
         ArrayList<Jugador> jugadores = Jugador.getJugadores();
 
-        if (jugadores.size() < 8) {
+        if (jugadores.size() < 16) {
             System.out.println("No hay suficientes jugadores para crear un torneo. Se requieren 16 jugadores.");
             torneos.remove(torneo); // Elimina el torneo si no se puede crear
             return;
         }
 
-        // Selecciona los primeros 16 jugadores (puedes mejorar la selección según tus criterios)
-        for (int i = 0; i < 8; i += 1) {
+        // Selecciona los primeros 16 jugadores creados en el arraylist de la clase Jugadores
+        for (int i = 0; i < 16; i += 2) {
             Jugador jugador1 = jugadores.get(i);
             Jugador jugador2 = jugadores.get(i + 1);
 

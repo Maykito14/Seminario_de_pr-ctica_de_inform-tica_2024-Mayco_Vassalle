@@ -91,7 +91,7 @@ public class Partido {
             Jugador jugador2 = buscarJugadorPorID(jugador2ID);
 
             if (jugador1 != null && jugador2 != null) {
-                Date fecha = new Date();  // Para simplificar, usamos la fecha actual
+                Date fecha = new Date();  // Usamos la fecha actual
                 Partido nuevoPartido = new Partido(jugador1, jugador2, fecha);
                 partidos.add(nuevoPartido);
                 System.out.println("Partido creado exitosamente.");

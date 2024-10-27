@@ -8,8 +8,12 @@ public class SGTB {
         int opcion = 0;
 
         do {
+            System.out.println("--------------------------------------------------------");
+            System.out.println("BIENVENIDOS AL SISTEMA DE GESTION DE TORNEOS DE BOCHAS");
+            System.out.println("--------------------------------------------------------");
             System.out.println("\nMenú de Gestión:");
-            System.out.println("1. Dar de alta un nuevo jugador");
+            System.out.println("Por favor, elija una opción del menú para continuar.");
+            System.out.println("\n1. Dar de alta un nuevo jugador");
             System.out.println("2. Consultar jugadores");
             System.out.println("3. Crear un nuevo partido");
             System.out.println("4. Consultar partidos");
@@ -45,10 +49,10 @@ public class SGTB {
                         Torneo.mostrarTorneos();
                         break;
                     case 8:
-                        System.out.println("Saliendo del programa...");
+                        System.out.println("Gracias por utilizar el sistema! Saliendo del programa...");
                         break;
                     default:
-                        System.out.println("Opción no válida. Intente de nuevo.");
+                        System.out.println("Opción no válida. Intente de nuevo con una de las opciones del menú.");
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Entrada no válida. Por favor, ingrese un número.");
